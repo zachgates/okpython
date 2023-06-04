@@ -35,7 +35,7 @@ _CACHE = pathlib.Path(__file__).with_name('Headers')
 def _find_python_install_info() -> typing.Iterator[types.SimpleNamespace]:
     info = yaml.safe_load_all(
         subprocess.getoutput('{0} {1}'.format(
-            command := _CACHE.with_name('generate_sources.sh'),
+            command := _CACHE.with_name('find_installs.sh'),
             command.with_name('data'),
             )))
 

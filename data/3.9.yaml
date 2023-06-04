@@ -1,0 +1,984 @@
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/classobject.h
+include: "classobject.h"
+exports:
+  - symbol: PyMethod_Type
+    fields:
+  - symbol: PyInstanceMethod_Type
+    fields:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/cellobject.h
+include: "cellobject.h"
+exports:
+  - symbol: PyCell_Type
+    fields:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/intrcheck.h
+include: "intrcheck.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/pyarena.h
+include: "pyarena.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/sliceobject.h
+include: "sliceobject.h"
+exports:
+  - symbol: PySlice_Type
+    fields:
+  - symbol: PyEllipsis_Type
+    fields:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/bltinmodule.h
+include: "bltinmodule.h"
+exports:
+  - symbol: PyFilter_Type
+    fields:
+  - symbol: PyMap_Type
+    fields:
+  - symbol: PyZip_Type
+    fields:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/tupleobject.h
+include: "tupleobject.h"
+exports:
+  - symbol: PyTuple_Type
+    fields:
+  - symbol: PyTupleIter_Type
+    fields:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/bitset.h
+include: "bitset.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/marshal.h
+include: "marshal.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/py_curses.h
+include: "py_curses.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/errcode.h
+include: "errcode.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/iterobject.h
+include: "iterobject.h"
+exports:
+  - symbol: PySeqIter_Type
+    fields:
+  - symbol: PyCallIter_Type
+    fields:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/asdl.h
+include: "asdl.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/rangeobject.h
+include: "rangeobject.h"
+exports:
+  - symbol: PyRange_Type
+    fields:
+  - symbol: PyRangeIter_Type
+    fields:
+  - symbol: PyLongRangeIter_Type
+    fields:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/pystrtod.h
+include: "pystrtod.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/warnings.h
+include: "warnings.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/pyhash.h
+include: "pyhash.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/pycapsule.h
+include: "pycapsule.h"
+exports:
+  - symbol: PyCapsule_Type
+    fields:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/pyerrors.h
+include: "pyerrors.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/fileutils.h
+include: "fileutils.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/parsetok.h
+include: "parsetok.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/dictobject.h
+include: "dictobject.h"
+exports:
+  - symbol: PyDict_Type
+    fields:
+  - symbol: PyDictKeys_Type
+    fields:
+  - symbol: PyDictValues_Type
+    fields:
+  - symbol: PyDictItems_Type
+    fields:
+  - symbol: PyDictIterKey_Type
+    fields:
+  - symbol: PyDictIterValue_Type
+    fields:
+  - symbol: PyDictIterItem_Type
+    fields:
+  - symbol: PyDictRevIterKey_Type
+    fields:
+  - symbol: PyDictRevIterItem_Type
+    fields:
+  - symbol: PyDictRevIterValue_Type
+    fields:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/ceval.h
+include: "ceval.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/pystate.h
+include: "pystate.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/floatobject.h
+include: "floatobject.h"
+exports:
+  - symbol: PyFloat_Type
+    fields:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/namespaceobject.h
+include: "namespaceobject.h"
+exports:
+  - symbol: _PyNamespace_Type
+    fields:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/exports.h
+include: "exports.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/longintrepr.h
+include: "longintrepr.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/structmember.h
+include: "structmember.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/code.h
+include: "code.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/pyctype.h
+include: "pyctype.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/patchlevel.h
+include: "patchlevel.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/frameobject.h
+include: "frameobject.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/abstract.h
+include: "abstract.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/context.h
+include: "context.h"
+exports:
+  - symbol: PyContext_Type
+    fields:
+  - symbol: PyContextVar_Type
+    fields:
+  - symbol: PyContextToken_Type
+    fields:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/modsupport.h
+include: "modsupport.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/pylifecycle.h
+include: "pylifecycle.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/internal/pycore_pyerrors.h
+include: "pycore_pyerrors.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/internal/pycore_warnings.h
+include: "pycore_warnings.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/internal/pycore_getopt.h
+include: "pycore_getopt.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/internal/pycore_hamt.h
+include: "pycore_hamt.h"
+exports:
+  - symbol: _PyHamt_Type
+    fields:
+  - symbol: _PyHamt_ArrayNode_Type
+    fields:
+  - symbol: _PyHamt_BitmapNode_Type
+    fields:
+  - symbol: _PyHamt_CollisionNode_Type
+    fields:
+  - symbol: _PyHamtKeys_Type
+    fields:
+  - symbol: _PyHamtValues_Type
+    fields:
+  - symbol: _PyHamtItems_Type
+    fields:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/internal/pycore_accu.h
+include: "pycore_accu.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/internal/pycore_pylifecycle.h
+include: "pycore_pylifecycle.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/internal/pycore_runtime.h
+include: "pycore_runtime.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/internal/pycore_gil.h
+include: "pycore_gil.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/internal/pycore_code.h
+include: "pycore_code.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/internal/pycore_pyhash.h
+include: "pycore_pyhash.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/internal/pycore_tupleobject.h
+include: "pycore_tupleobject.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/internal/pycore_fileutils.h
+include: "pycore_fileutils.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/internal/pycore_call.h
+include: "pycore_call.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/internal/pycore_hashtable.h
+include: "pycore_hashtable.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/internal/pycore_abstract.h
+include: "pycore_abstract.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/internal/pycore_pymem.h
+include: "pycore_pymem.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/internal/pegen_interface.h
+include: "pegen_interface.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/internal/pycore_pystate.h
+include: "pycore_pystate.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/internal/pycore_gc.h
+include: "pycore_gc.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/internal/pycore_traceback.h
+include: "pycore_traceback.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/internal/pycore_atomic.h
+include: "pycore_atomic.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/internal/pycore_import.h
+include: "pycore_import.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/internal/pycore_sysmodule.h
+include: "pycore_sysmodule.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/internal/pycore_byteswap.h
+include: "pycore_byteswap.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/internal/pycore_initconfig.h
+include: "pycore_initconfig.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/internal/pycore_interp.h
+include: "pycore_interp.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/internal/pycore_dtoa.h
+include: "pycore_dtoa.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/internal/pycore_condvar.h
+include: "pycore_condvar.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/internal/pycore_bytes_methods.h
+include: "pycore_bytes_methods.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/internal/pycore_object.h
+include: "pycore_object.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/internal/pycore_ceval.h
+include: "pycore_ceval.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/internal/pycore_pathconfig.h
+include: "pycore_pathconfig.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/internal/pycore_context.h
+include: "pycore_context.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/datetime.h
+include: "datetime.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/node.h
+include: "node.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/methodobject.h
+include: "methodobject.h"
+exports:
+  - symbol: PyCFunction_Type
+    fields:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/genobject.h
+include: "genobject.h"
+exports:
+  - symbol: PyGen_Type
+    fields:
+  - symbol: PyCoro_Type
+    fields:
+  - symbol: _PyCoroWrapper_Type
+    fields:
+  - symbol: PyAsyncGen_Type
+    fields:
+  - symbol: _PyAsyncGenASend_Type
+    fields:
+  - symbol: _PyAsyncGenWrappedValue_Type
+    fields:
+  - symbol: _PyAsyncGenAThrow_Type
+    fields:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/pymem.h
+include: "pymem.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/boolobject.h
+include: "boolobject.h"
+exports:
+  - symbol: PyBool_Type
+    fields:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/interpreteridobject.h
+include: "interpreteridobject.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/fileobject.h
+include: "fileobject.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/pyexpat.h
+include: "pyexpat.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/pystrcmp.h
+include: "pystrcmp.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/pymath.h
+include: "pymath.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/pyconfig.h
+include: "pyconfig.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/weakrefobject.h
+include: "weakrefobject.h"
+exports:
+  - symbol: _PyWeakref_RefType
+    fields:
+  - symbol: _PyWeakref_ProxyType
+    fields:
+  - symbol: _PyWeakref_CallableProxyType
+    fields:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/pymacconfig.h
+include: "pymacconfig.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/pyfpe.h
+include: "pyfpe.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/pymacro.h
+include: "pymacro.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/enumobject.h
+include: "enumobject.h"
+exports:
+  - symbol: PyEnum_Type
+    fields:
+  - symbol: PyReversed_Type
+    fields:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/moduleobject.h
+include: "moduleobject.h"
+exports:
+  - symbol: PyModule_Type
+    fields:
+  - symbol: PyModuleDef_Type
+    fields:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/typeslots.h
+include: "typeslots.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/symtable.h
+include: "symtable.h"
+exports:
+  - symbol: PySTEntry_Type
+    fields:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/odictobject.h
+include: "odictobject.h"
+exports:
+  - symbol: PyODict_Type
+    fields:
+  - symbol: PyODictIter_Type
+    fields:
+  - symbol: PyODictKeys_Type
+    fields:
+  - symbol: PyODictItems_Type
+    fields:
+  - symbol: PyODictValues_Type
+    fields:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/ast.h
+include: "ast.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/compile.h
+include: "compile.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/eval.h
+include: "eval.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/tracemalloc.h
+include: "tracemalloc.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/setobject.h
+include: "setobject.h"
+exports:
+  - symbol: PySet_Type
+    fields:
+  - symbol: PyFrozenSet_Type
+    fields:
+  - symbol: PySetIter_Type
+    fields:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/codecs.h
+include: "codecs.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/tupleobject.h
+include: "tupleobject.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/pyerrors.h
+include: "pyerrors.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/fileutils.h
+include: "fileutils.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/dictobject.h
+include: "dictobject.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/ceval.h
+include: "ceval.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/pystate.h
+include: "pystate.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/code.h
+include: "code.h"
+exports:
+  - symbol: PyCode_Type
+    fields:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/frameobject.h
+include: "frameobject.h"
+exports:
+  - symbol: PyFrame_Type
+    fields:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/abstract.h
+include: "abstract.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/pylifecycle.h
+include: "pylifecycle.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/methodobject.h
+include: "methodobject.h"
+exports:
+  - symbol: PyCMethod_Type
+    fields:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/pymem.h
+include: "pymem.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/interpreteridobject.h
+include: "interpreteridobject.h"
+exports:
+  - symbol: _PyInterpreterID_Type
+    fields:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/fileobject.h
+include: "fileobject.h"
+exports:
+  - symbol: PyStdPrinter_Type
+    fields:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/object.h
+include: "object.h"
+exports:
+  - symbol: _PyNone_Type
+    fields:
+  - symbol: _PyNotImplemented_Type
+    fields:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/bytearrayobject.h
+include: "bytearrayobject.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/import.h
+include: "import.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/unicodeobject.h
+include: "unicodeobject.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/traceback.h
+include: "traceback.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/initconfig.h
+include: "initconfig.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/objimpl.h
+include: "objimpl.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/sysmodule.h
+include: "sysmodule.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/bytesobject.h
+include: "bytesobject.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/cpython/listobject.h
+include: "listobject.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/grammar.h
+include: "grammar.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/complexobject.h
+include: "complexobject.h"
+exports:
+  - symbol: PyComplex_Type
+    fields:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/pystrhex.h
+include: "pystrhex.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/pyframe.h
+include: "pyframe.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/picklebufobject.h
+include: "picklebufobject.h"
+exports:
+  - symbol: PyPickleBuffer_Type
+    fields:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/object.h
+include: "object.h"
+exports:
+  - symbol: PyType_Type
+    fields:
+  - symbol: PyBaseObject_Type
+    fields:
+  - symbol: PySuper_Type
+    fields:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/structseq.h
+include: "structseq.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/bytearrayobject.h
+include: "bytearrayobject.h"
+exports:
+  - symbol: PyByteArray_Type
+    fields:
+  - symbol: PyByteArrayIter_Type
+    fields:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/pytime.h
+include: "pytime.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/import.h
+include: "import.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/token.h
+include: "token.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/ucnhash.h
+include: "ucnhash.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/osdefs.h
+include: "osdefs.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/pythonrun.h
+include: "pythonrun.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/unicodeobject.h
+include: "unicodeobject.h"
+exports:
+  - symbol: PyUnicode_Type
+    fields:
+  - symbol: PyUnicodeIter_Type
+    fields:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/Python-ast.h
+include: "Python-ast.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/traceback.h
+include: "traceback.h"
+exports:
+  - symbol: PyTraceBack_Type
+    fields:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/funcobject.h
+include: "funcobject.h"
+exports:
+  - symbol: PyFunction_Type
+    fields:
+  - symbol: PyClassMethod_Type
+    fields:
+  - symbol: PyStaticMethod_Type
+    fields:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/pythread.h
+include: "pythread.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/Python.h
+include: "Python.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/memoryobject.h
+include: "memoryobject.h"
+exports:
+  - symbol: _PyManagedBuffer_Type
+    fields:
+  - symbol: PyMemoryView_Type
+    fields:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/opcode.h
+include: "opcode.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/descrobject.h
+include: "descrobject.h"
+exports:
+  - symbol: PyClassMethodDescr_Type
+    fields:
+  - symbol: PyGetSetDescr_Type
+    fields:
+  - symbol: PyMemberDescr_Type
+    fields:
+  - symbol: PyMethodDescr_Type
+    fields:
+  - symbol: PyWrapperDescr_Type
+    fields:
+  - symbol: PyDictProxy_Type
+    fields:
+  - symbol: _PyMethodWrapper_Type
+    fields:
+  - symbol: PyProperty_Type
+    fields:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/objimpl.h
+include: "objimpl.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/pyport.h
+include: "pyport.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/pydtrace.h
+include: "pydtrace.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/sysmodule.h
+include: "sysmodule.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/longobject.h
+include: "longobject.h"
+exports:
+  - symbol: PyLong_Type
+    fields:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/osmodule.h
+include: "osmodule.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/pydtrace_probes.h
+include: "pydtrace_probes.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/bytesobject.h
+include: "bytesobject.h"
+exports:
+  - symbol: PyBytes_Type
+    fields:
+  - symbol: PyBytesIter_Type
+    fields:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/listobject.h
+include: "listobject.h"
+exports:
+  - symbol: PyList_Type
+    fields:
+  - symbol: PyListIter_Type
+    fields:
+  - symbol: PyListRevIter_Type
+    fields:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/graminit.h
+include: "graminit.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/pydebug.h
+include: "pydebug.h"
+exports:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/genericaliasobject.h
+include: "genericaliasobject.h"
+exports:
+  - symbol: Py_GenericAliasType
+    fields:
+...
+
+--- # /usr/local/Cellar/python@3.9/3.9.13_1/Frameworks/Python.framework/Versions/3.9/include/python3.9/dynamic_annotations.h
+include: "dynamic_annotations.h"
+exports:
+...

@@ -1,0 +1,263 @@
+---
+formula : !!str python@3.10
+keg     : !!str 3.10.5
+headers : !!map
+
+    ? !!str "classobject.h"
+    : !!seq [
+        PyMethod_Type,
+        PyInstanceMethod_Type,
+    ]
+
+    ? !!str "cellobject.h"
+    : !!seq [
+        PyCell_Type,
+    ]
+
+    ? !!str "sliceobject.h"
+    : !!seq [
+        PySlice_Type,
+        PyEllipsis_Type,
+    ]
+
+    ? !!str "bltinmodule.h"
+    : !!seq [
+        PyFilter_Type,
+        PyMap_Type,
+        PyZip_Type,
+    ]
+
+    ? !!str "tupleobject.h"
+    : !!seq [
+        PyTuple_Type,
+        PyTupleIter_Type,
+    ]
+
+    ? !!str "iterobject.h"
+    : !!seq [
+        PySeqIter_Type,
+        PyCallIter_Type,
+    ]
+
+    ? !!str "rangeobject.h"
+    : !!seq [
+        PyRange_Type,
+        PyRangeIter_Type,
+        PyLongRangeIter_Type,
+    ]
+
+    ? !!str "pycapsule.h"
+    : !!seq [
+        PyCapsule_Type,
+    ]
+
+    ? !!str "dictobject.h"
+    : !!seq [
+        PyDict_Type,
+        PyDictKeys_Type,
+        PyDictValues_Type,
+        PyDictItems_Type,
+        PyDictIterKey_Type,
+        PyDictIterValue_Type,
+        PyDictIterItem_Type,
+        PyDictRevIterKey_Type,
+        PyDictRevIterItem_Type,
+        PyDictRevIterValue_Type,
+    ]
+
+    ? !!str "floatobject.h"
+    : !!seq [
+        PyFloat_Type,
+    ]
+
+    ? !!str "namespaceobject.h"
+    : !!seq [
+        _PyNamespace_Type,
+    ]
+
+    ? !!str "context.h"
+    : !!seq [
+        PyContext_Type,
+        PyContextVar_Type,
+        PyContextToken_Type,
+    ]
+
+    ? !!str "internal/pycore_hamt.h"
+    : !!seq [
+        _PyHamt_Type,
+        _PyHamt_ArrayNode_Type,
+        _PyHamt_BitmapNode_Type,
+        _PyHamt_CollisionNode_Type,
+        _PyHamtKeys_Type,
+        _PyHamtValues_Type,
+        _PyHamtItems_Type,
+    ]
+
+    ? !!str "methodobject.h"
+    : !!seq [
+        PyCFunction_Type,
+    ]
+
+    ? !!str "genobject.h"
+    : !!seq [
+        PyGen_Type,
+        PyCoro_Type,
+        _PyCoroWrapper_Type,
+        PyAsyncGen_Type,
+        _PyAsyncGenASend_Type,
+        _PyAsyncGenWrappedValue_Type,
+        _PyAsyncGenAThrow_Type,
+    ]
+
+    ? !!str "boolobject.h"
+    : !!seq [
+        PyBool_Type,
+    ]
+
+    ? !!str "weakrefobject.h"
+    : !!seq [
+        _PyWeakref_RefType,
+        _PyWeakref_ProxyType,
+        _PyWeakref_CallableProxyType,
+    ]
+
+    ? !!str "enumobject.h"
+    : !!seq [
+        PyEnum_Type,
+        PyReversed_Type,
+    ]
+
+    ? !!str "moduleobject.h"
+    : !!seq [
+        PyModule_Type,
+        PyModuleDef_Type,
+    ]
+
+    ? !!str "setobject.h"
+    : !!seq [
+        PySet_Type,
+        PyFrozenSet_Type,
+        PySetIter_Type,
+    ]
+
+    ? !!str "cpython/code.h"
+    : !!seq [
+        PyCode_Type,
+    ]
+
+    ? !!str "cpython/frameobject.h"
+    : !!seq [
+        PyFrame_Type,
+    ]
+
+    ? !!str "cpython/methodobject.h"
+    : !!seq [
+        PyCMethod_Type,
+    ]
+
+    ? !!str "cpython/interpreteridobject.h"
+    : !!seq [
+        _PyInterpreterID_Type,
+    ]
+
+    ? !!str "cpython/fileobject.h"
+    : !!seq [
+        PyStdPrinter_Type,
+    ]
+
+    ? !!str "cpython/odictobject.h"
+    : !!seq [
+        PyODict_Type,
+        PyODictIter_Type,
+        PyODictKeys_Type,
+        PyODictItems_Type,
+        PyODictValues_Type,
+    ]
+
+    ? !!str "cpython/picklebufobject.h"
+    : !!seq [
+        PyPickleBuffer_Type,
+    ]
+
+    ? !!str "cpython/object.h"
+    : !!seq [
+        _PyNone_Type,
+        _PyNotImplemented_Type,
+    ]
+
+    ? !!str "complexobject.h"
+    : !!seq [
+        PyComplex_Type,
+    ]
+
+    ? !!str "object.h"
+    : !!seq [
+        PyType_Type,
+        PyBaseObject_Type,
+        PySuper_Type,
+    ]
+
+    ? !!str "bytearrayobject.h"
+    : !!seq [
+        PyByteArray_Type,
+        PyByteArrayIter_Type,
+    ]
+
+    ? !!str "unicodeobject.h"
+    : !!seq [
+        PyUnicode_Type,
+        PyUnicodeIter_Type,
+    ]
+
+    ? !!str "traceback.h"
+    : !!seq [
+        PyTraceBack_Type,
+    ]
+
+    ? !!str "funcobject.h"
+    : !!seq [
+        PyFunction_Type,
+        PyClassMethod_Type,
+        PyStaticMethod_Type,
+    ]
+
+    ? !!str "memoryobject.h"
+    : !!seq [
+        _PyManagedBuffer_Type,
+        PyMemoryView_Type,
+    ]
+
+    ? !!str "descrobject.h"
+    : !!seq [
+        PyClassMethodDescr_Type,
+        PyGetSetDescr_Type,
+        PyMemberDescr_Type,
+        PyMethodDescr_Type,
+        PyWrapperDescr_Type,
+        PyDictProxy_Type,
+        _PyMethodWrapper_Type,
+        PyProperty_Type,
+    ]
+
+    ? !!str "longobject.h"
+    : !!seq [
+        PyLong_Type,
+    ]
+
+    ? !!str "bytesobject.h"
+    : !!seq [
+        PyBytes_Type,
+        PyBytesIter_Type,
+    ]
+
+    ? !!str "listobject.h"
+    : !!seq [
+        PyList_Type,
+        PyListIter_Type,
+        PyListRevIter_Type,
+    ]
+
+    ? !!str "genericaliasobject.h"
+    : !!seq [
+        Py_GenericAliasType,
+    ]

@@ -58,7 +58,7 @@ def _find_headers(src: pathlib.Path) -> typing.Iterator:
                 yield path
 
 
-def _copy_headers():
+def _cache_headers():
     if not _CACHE.exists():
         _CACHE.mkdir()
 
@@ -83,8 +83,6 @@ def _copy_headers():
 
             print(dest)
             shutil.copy(src, dest)
-            pprint(_parse_header(dest))
-            print()
 
         # for symbol in exports:
         #     try:
@@ -95,4 +93,14 @@ def _copy_headers():
 
 
 if __name__ == '__main__':
-    _copy_headers()
+    _cache_headers()
+
+    for formula in _CACHE.iterdir():
+        if not formula.is_dir():
+            continue
+
+        for keg in formula.iterdir():
+            for header in _find_headers(keg):
+                print(header)
+                pprint(_parse_header(header))
+                print()

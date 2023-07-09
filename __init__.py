@@ -1,54 +1,40 @@
-__all__ = [
-    'PyTypeObject', 'PyTypeObject_p',
-    'PyObject', 'PyObject_p',
-    'PyVarObject', 'PyVarObject_p',
-]
-
-import ctypes
-import struct
-import sys
+import dataclasses
+import pathlib
+import subprocess
+import typing
+import yaml
 
 
-ctypes.py_ssize_t = (
-    ctypes.c_size_t
-    if sys.version_info > (2, 4)
-    else ctypes.c_int
-    )
+__file__ = pathlib.Path(__file__)
+CELLAR = subprocess.getoutput('brew --cellar')
 
 
-ctypes.py_hash_t = (
-    ctypes.c_int64
-    if (8 * struct.calcsize('P') == 64) # __LP64__
-    else ctypes.c_int32
-    )
+@dataclasses.dataclass
+class PythonPackage(object):
+
+    formula: str = dataclasses.field(default = '')
+    keg: str = dataclasses.field(default = '')
+    headers: dict = dataclasses.field(default_factory = dict)
+
+    @property
+    def path(self):
+        return pathlib.Path(self.formula, self.keg)
+
+    def get_source(self, header: str):
+        return pathlib.Path(
+            CELLAR, self.formula, self.keg,
+            'Frameworks', 'Python.framework',
+            'Versions', 'Current', 'Headers', header,
+            )
+
+    def get_cache(self, cache: pathlib.Path, header: str):
+        return pathlib.Path(cache, self.formula, self.keg, header)
 
 
-class PyTypeObject(ctypes.Structure):
-    ...
-
-
-class PyObject(ctypes.Structure):
-    _fields_ = [
-        ( 'ob_refcnt' , ctypes.c_size_t  ),
-        ( 'ob_type'   , ctypes.py_object ),
-    ]
-
-
-class PyVarObject(ctypes.Structure):
-    _anonymous_ = ('ob_base',)
-    _fields_ = [
-        ( 'ob_base' , PyObject         ),
-        ( 'ob_size' , ctypes.py_hash_t ),
-    ]
-
-
-PyTypeObject._anonymous_ = ('ob_base',)
-PyTypeObject._fields_ = [
-    ( 'ob_base' , PyVarObject     ),
-    ( 'tp_name' , ctypes.c_char_p ),
-]
-
-
-PyTypeObject_p = ctypes.POINTER(PyTypeObject)
-PyObject_p = ctypes.POINTER(PyObject)
-PyVarObject_p = ctypes.POINTER(PyVarObject)
+def find_python_packages() -> typing.Iterator[PythonPackage]:
+    for document in yaml.safe_load_all(
+        subprocess.getoutput('{0} {1}'.format(
+            __file__.with_name('find_headers.sh'),
+            __file__.with_name('data'),
+            ))):
+                yield PythonPackage(**document)

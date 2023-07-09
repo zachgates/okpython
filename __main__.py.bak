@@ -1,0 +1,48 @@
+#!/usr/local/bin/py -3
+
+import _ctypes
+import ctypes
+import dataclasses
+import pathlib
+import shutil
+import subprocess
+import types
+import typing
+import yaml
+
+from distutils import sysconfig
+from pprint import pprint
+
+from . import find_python_packages, PythonPackage
+
+
+def _cache_package(cache: pathlib.Path, package: PythonPackage):
+    if not (_cache := pathlib.Path(cache, package.path)).exists():
+        _cache.mkdir(parents = True)
+
+    for header, exports in package.headers.items():
+        assert (source := package.get_source(header).resolve()).exists()
+        if not (cache := package.get_cache(_cache, header)).parent.exists():
+            cache.parent.mkdir(parents = True)
+
+        shutil.copy(source, cache)
+        yield (header, exports)
+
+
+if __name__ == '__main__':
+    _cache = pathlib.Path(__file__).with_name('Headers')
+    if isinstance(_cache, pathlib.Path):
+        if not _cache.exists():
+            _cache.mkdir()
+
+    for _package in find_python_packages():
+        for _header, _exports in _cache_package(_cache, _package):
+            print(_header)
+            pprint(_exports)
+            print()
+
+            # for symbol in exports:
+            #     try:
+            #         PyTypeObject.in_dll(ctypes.pythonapi, symbol)
+            #     except ValueError as exc:
+            #         print(f'{package.get_source(header)}: {exc}')

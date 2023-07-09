@@ -1,106 +1,40 @@
-#!/usr/local/bin/py -3
+import contextlib
 
-import ctypes
-import pathlib
-import shutil
-import subprocess
-import types
-import typing
-import yaml
-
-from distutils import sysconfig
-from pprint import pprint
-
-from . import PyTypeObject, PyObject
+from .src import PyTypeObject, PyObject
 
 
-_CELLAR = subprocess.getoutput('brew --cellar')
-_CACHE = pathlib.Path(__file__).with_name('Headers')
+@contextlib.contextmanager
+def easytest(test):
+    try:
+        exec(test)
+        raise RuntimeWarning('patch unnecessary')
+    except TypeError:
+        yield
+        exec(test)
 
 
-# _PREFIX = pathlib.Path(sysconfig.PREFIX).with_name('Current')
-# for prefix in map(pathlib.Path,
-#                   [sysconfig.PREFIX,
-#                    sysconfig.EXEC_PREFIX,
-#                    sysconfig.BASE_PREFIX,
-#                    sysconfig.BASE_EXEC_PREFIX,
-#                    ]):
-#     assert prefix.exists()
-#     print(prefix.resolve())
+###
 
 
-# pprint(sysconfig.get_config_vars())
+with easytest('''
+class sub_ellipsis(ellipsis := type(...)): pass
+assert sub_ellipsis.mro() == [sub_ellipsis, ellipsis, object]
+'''):
+    tp = PyTypeObject.from_address(id(type(...)))
+    tp.tp_flags |= TPFLAG('BASETYPE')
 
 
-def _find_python_install_info() -> typing.Iterator[types.SimpleNamespace]:
-    info = yaml.safe_load_all(
-        subprocess.getoutput('{0} {1}'.format(
-            command := _CACHE.with_name('find_installs.sh'),
-            command.with_name('data'),
-            )))
-
-    for document in info:
-        yield types.SimpleNamespace(**document)
+###
 
 
-def _parse_header(header: pathlib.Path) -> dict:
-    with open(header) as fp:
-        return sysconfig.parse_config_h(fp)
-
-
-def _find_headers(src: pathlib.Path) -> typing.Iterator:
-    for path in src.iterdir():
-        if path.is_dir():
-            yield from _find_headers(path)
-        else:
-            assert path.is_file()
-            if path.suffix == '.h':
-                yield path
-
-
-def _cache_headers():
-    if not _CACHE.exists():
-        _CACHE.mkdir()
-
-    for ns in _find_python_install_info():
-        formula = pathlib.Path(_CELLAR, ns.formula)
-        keg = pathlib.Path(formula, ns.keg)
-        cache = pathlib.Path(_CACHE, ns.formula, ns.keg)
-        headers = pathlib.Path(
-            keg,
-            'Frameworks', 'Python.framework',
-            'Versions', 'Current', 'Headers',
-            )
-
-        if not cache.exists():
-            cache.mkdir(parents = True)
-
-        for header, exports in ns.headers.items():
-            assert (src := pathlib.Path(headers, header)).exists()
-            if (dest := pathlib.Path(cache, header)).parent != cache:
-                if not dest.parent.exists():
-                    dest.parent.mkdir(parents = True)
-
-            print(dest)
-            shutil.copy(src, dest)
-
-        # for symbol in exports:
-        #     try:
-        #         tp = PyTypeObject.in_dll(ctypes.pythonapi, symbol)
-        #         # print(tp)
-        #     except ValueError as exc:
-        #         print(f'{header}: {exc}')
-
-
-if __name__ == '__main__':
-    _cache_headers()
-
-    for formula in _CACHE.iterdir():
-        if not formula.is_dir():
-            continue
-
-        for keg in formula.iterdir():
-            for header in _find_headers(keg):
-                print(header)
-                pprint(_parse_header(header))
-                print()
+with easytest('''
+ns = types.SimpleNamespace()
+setattr(ns, 'foo', 0x_BEEF)
+ns['bar'] = (0x_DEAD << 16)
+assert (ns.foo ^ ns['bar']) == 0x_DEAD_BEEF
+'''):
+    tp = PyTypeObject.from_address(id(types.SimpleNamespace))
+    tp.tp_as_mapping.contents = PyMappingMethods(
+        mp_subscript = tp.tp_getattro,
+        mp_ass_subscript = tp.tp_setattro,
+        )

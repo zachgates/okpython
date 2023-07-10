@@ -154,12 +154,12 @@ PyAPI_FUNC("_Py_wfopen",
         ctypes.c_wchar_p, # mode
     ])
 
-PyAPI_FUNC("_Py_fopen",
-    restype = ctypes.c_void_p, # FILE *
-    argtypes = [
-        ctypes.c_char_p, # pathname
-        ctypes.c_char_p, # mode
-    ])
+# PyAPI_FUNC("_Py_fopen",
+#     restype = ctypes.c_void_p, # FILE *
+#     argtypes = [
+#         ctypes.c_char_p, # pathname
+#         ctypes.c_char_p, # mode
+#     ])
 
 PyAPI_FUNC("_Py_fopen_obj",
     restype = ctypes.c_void_p, # FILE *

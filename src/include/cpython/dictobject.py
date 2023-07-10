@@ -191,13 +191,13 @@ def PyDict_GET_SIZE(mp):
 ###
 
 
-# PyAPI_FUNC("_PyDict_Contains",
-#     restype = ctypes.c_int,
-#     argtypes = [
-#         PyObject_p,       # mp
-#         PyObject_p,       # key
-#         ctypes.py_hash_t, # hash
-#     ])
+PyAPI_FUNC("_PyDict_Contains",
+    restype = ctypes.c_int,
+    argtypes = [
+        PyObject_p,       # mp
+        PyObject_p,       # key
+        ctypes.py_hash_t, # hash
+    ])
 
 PyAPI_FUNC("_PyDict_NewPresized",
     restype = PyObject_p,
@@ -256,12 +256,12 @@ PyAPI_FUNC("_PyDict_MergeEx",
         ctypes.c_int, # override
     ])
 
-# PyAPI_FUNC("_PyDict_GetItemId",
-#     restype = PyObject_p,
-#     argtypes = [
-#         PyObject_p,       # dp
-#         _Py_Identifier_p, # key
-#     ])
+PyAPI_FUNC("_PyDict_GetItemId",
+    restype = PyObject_p,
+    argtypes = [
+        PyObject_p,       # dp
+        _Py_Identifier_p, # key
+    ])
 
 PyAPI_FUNC("_PyDict_SetItemId",
     restype = ctypes.c_int,

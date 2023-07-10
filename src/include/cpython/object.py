@@ -39,11 +39,11 @@ if ctypes.pyconfig.Py_TRACE_REFS:
         ])
 
 
-# PyAPI_FUNC("_PyTraceMalloc_NewReference",
-#     restype = ctypes.c_int,
-#     argtypes = [
-#         PyObject_p,
-#     ])
+PyAPI_FUNC("_PyTraceMalloc_NewReference",
+    restype = ctypes.c_int,
+    argtypes = [
+        PyObject_p,
+    ])
 
 
 if ctypes.pyconfig.Py_DEBUG:
@@ -705,12 +705,12 @@ PyAPI_FUNC("_PyObject_SetAttrId",
         PyObject_p,
     ])
 
-# PyAPI_FUNC("_PyObject_HasAttrId",
-#     restype = ctypes.c_int,
-#     argtypes = [
-#         PyObject_p,
-#         _Py_Identifier_p,
-#     ])
+PyAPI_FUNC("_PyObject_HasAttrId",
+    restype = ctypes.c_int,
+    argtypes = [
+        PyObject_p,
+        _Py_Identifier_p,
+    ])
 
 PyAPI_FUNC("_PyObject_LookupAttr",
     restype = ctypes.c_int,
